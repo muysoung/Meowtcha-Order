@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowtcha Cafe - Transaction History</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meowtcha Cafe Transactions</h1>
+            <a href="index.html" class="back-link">← Back to Cashier</a>
+        </header>
+
+        <div class="transactions-section">
+            <div class="transactions-controls">
+                <div class="filter-controls">
+                    <label for="filterCashier">Filter by Cashier:</label>
+                    <select id="filterCashier">
+                        <option value="all">All Cashiers</option>
+                        <option value="Muysoung">Muysoung</option>
+                        <option value="Houy Thoung">Houy Thoung</option>
+                        <option value="Kevin">Kevin</option>
+                        <option value="Sotheary">Sotheary</option>
+                        <option value="Muysing">Muysing</option>
+                        <option value="Rosalyn">Rosalyn</option>
+                    </select>
+                    <label for="filterDate">Filter by Date:</label>
+                    <input type="date" id="filterDate">
+                </div>
+            </div>
+            <div class="transactions-list" id="transactionsList">
+                <p class="empty-transactions">Loading transactions...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="history.js"></script>
+</body>
+</html>

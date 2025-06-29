@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meowtcha Cafe Cashier</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meowtcha Cafe</h1>
+            <div class="cashier-select">
+                <label for="cashier">Cashier:</label>
+                <select id="cashier">
+                    <option value="">Select Cashier</option>
+                    <option value="Muysoung">Muysoung</option>
+                    <option value="Houy Thoung">Houy Thoung</option>
+                    <option value="Kevin">Kevin</option>
+                    <option value="Sotheary">Sotheary</option>
+                    <option value="Muysing">Muysing</option>
+                    <option value="Rosalyn">Rosalyn</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="menu-section">
+                <h2>Menu</h2>
+                <div class="menu-items" id="menuItems">
+                    <!-- Menu items will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="order-section">
+                <h2>Current Order</h2>
+                <div class="order-items" id="orderItems">
+                    <p class="empty-order">No items added yet</p>
+                </div>
+                <div class="order-total">
+                    <p>Total: <span id="totalAmount">$0.00</span> / <span id="totalAmountKHR">៛0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment-section">
+            <h2>Payment</h2>
+            <div class="payment-options">
+                <div class="payment-method">
+                    <label>Payment Method:</label>
+                    <div>
+                        <input type="radio" id="cash" name="paymentMethod" value="cash" checked>
+                        <label for="cash">Cash</label>
+                        <input type="radio" id="online" name="paymentMethod" value="online">
+                        <label for="online">Online</label>
+                    </div>
+                </div>
+                <div class="bill-currency">
+                    <label>Bill Currency:</label>
+                    <div>
+                        <input type="radio" id="usd" name="billCurrency" value="USD" checked>
+                        <label for="usd">USD</label>
+                        <input type="radio" id="khr" name="billCurrency" value="KHR">
+                        <label for="khr">KHR</label>
+                    </div>
+                </div>
+                <div class="amount-given" id="amountGivenSection">
+                    <label for="amountGiven">Amount Given:</label>
+                    <input type="number" id="amountGiven" min="0" step="0.01">
+                    <span id="currencySymbol">$</span>
+                </div>
+            </div>
+            <div class="change-display" id="changeDisplay">
+                <p>Change: <span id="changeAmount">$0.00</span> / <span id="changeAmountKHR">៛0</span></p>
+            </div>
+            <div class="action-buttons">
+                <button id="completeOrder">Complete Order</button>
+                <button id="newOrder">New Order</button>
+            </div>
+        </div>
+
+        <div class="receipt-modal" id="receiptModal">
+            <div class="receipt-content">
+                <div class="receipt-header">
+                    <h2>Meowtcha Cafe</h2>
+                    <p id="receiptDateTime"></p>
+                    <p>Cashier: <span id="receiptCashier"></span></p>
+                </div>
+                <div class="receipt-items" id="receiptItems">
+                    <!-- Receipt items will be populated by JavaScript -->
+                </div>
+                <div class="receipt-totals">
+                    <p>Total: <span id="receiptTotal"></span></p>
+                    <p>Payment: <span id="receiptPayment"></span></p>
+                    <p>Change: <span id="receiptChange"></span></p>
+                </div>
+                <div class="receipt-footer">
+                    <p>Thank you for visiting Meowtcha Cafe!</p>
+                    <button id="printReceipt">Print Receipt</button>
+                    <button id="closeReceipt">Close</button>
+                </div>
+                        <div class="transactions-section">
+            <h2>Transaction History</h2>
+            <div class="transactions-controls">
+                <button id="showTransactions">Show History</button>
+                <button id="clearTransactions">Clear History</button>
+            </div>
+            <div class="transactions-list" id="transactionsList">
+                <!-- Transactions will be loaded here -->
+                <p class="empty-transactions">No transactions yet</p>
+            </div>
+            <header>
+    <h1>Meowtcha Cafe</h1>
+    <div class="header-controls">
+        <div class="cashier-select">
+            <label for="cashier">Cashier:</label>
+            <select id="cashier">
+                <!-- options remain the same -->
+            </select>
+        </div>
+        <a href="history.html" class="history-link">View Transactions</a>
+    </div>
+</header>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
